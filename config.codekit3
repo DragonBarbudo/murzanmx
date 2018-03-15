@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26261",
 "files": {
+	"\/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/.gitattributes",
+		"oF": 0
+		},
 	"\/app\/_app.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -145,6 +152,13 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"\/CNAME": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/CNAME",
+		"oF": 0
 		},
 	"\/index.html": {
 		"cB": 0,
