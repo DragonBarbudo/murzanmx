@@ -198,6 +198,28 @@
   font: normal normal normal 16px/1 FontAwesome;
   margin-left: 15px;
 }
+@media (max-width: 1023px) {
+  .navbar a,
+  .navbar .navbar-item {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .navbar .dropdown {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar .dropdown .dropdown-trigger {
+    width: 100%;
+    display: block;
+  }
+  .navbar .dropdown .dropdown-menu {
+    position: static;
+    display: block;
+    display: flex !important;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+}
 #inicio .pleca {
   background: #B2B2B2;
   color: #fff;

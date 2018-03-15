@@ -180,7 +180,25 @@
 
     }
   }
+  @media (max-width:1023px){
+    a, .navbar-item{text-align: center; padding: 10px 0;}
+    .dropdown{
+      width: 100%;
+      flex-direction: column;
+      .dropdown-trigger{
+        width: 100%;
+        display: block;
 
+      }
+      .dropdown-menu{
+        position: static;
+        display: block;
+        display: flex !important;
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+    }
+  }
 }
 
 
