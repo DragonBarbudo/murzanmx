@@ -1,0 +1,50 @@
+include app/_app
+doctype html
+html(lang="es")
+  head
+    +head
+    title Murzan México
+    meta(name="description" content="Sistemas integrales para el procesamiento, manejo y trasvase de producto terminado y materias primas para las industrias alimenticia, cosmética, farmacéutica y biotecnológica.")
+  body
+    +topbar
+    +navigation(false)
+  
+    section.section#nosotros
+      .container
+        .columns
+          .column
+            h2.is-title=menu_r[lng]
+            p!=rep_txt[lng]
+            
+        .columns.is-multiline
+          each rep, indx in rep_imgs
+            .column.is-6
+              .box: .media
+                  .media-left: figure.image.is-128x128: img(src="app/img/"+rep alt="")
+                  .media-content
+                    .content
+                      p: strong=rep_titles[lng][indx]
+                      p=rep_txts[lng][indx]
+            
+            //.box: .media
+                .media-left: figure.image.is-128x128: img(src="app/img/r_anderson.gif" alt="Anderson")
+                .media-content
+                  .content
+                    p: strong=rep_anderson_t[lng]
+                    p=rep_anderson_txt[lng]
+          //.column
+            .box: .media
+                .media-left: figure.image.is-128x128: img(src="app/img/r_anderson.gif" alt="Anderson")
+                .media-content
+                  .content
+                    p: strong=rep_anderson_t[lng]
+                    p=rep_anderson_txt[lng]
+    
+
+          
+        
+    section.section#contacto
+    
+    +footer
+    
+    +scripts

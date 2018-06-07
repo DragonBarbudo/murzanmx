@@ -1,0 +1,43 @@
+include app/_app
+doctype html
+html(lang="es")
+  head
+    +head
+    title Murzan México
+    meta(name="description" content="Sistemas integrales para el procesamiento, manejo y trasvase de producto terminado y materias primas para las industrias alimenticia, cosmética, farmacéutica y biotecnológica.")
+  body
+    +topbar
+    +navigation(false)
+  
+    section.section#productos
+      .container
+        each pr, index in products
+          section(id=index)
+            .columns
+              .column
+                h2.is-title=pr[lng][0]
+                p!=pr[lng][1]
+                a.button.is-3d(data-modal="#modal"+index) Ver video
+                .modal(id="modal"+index)
+                  .modal-background
+                  .modal-content
+                    .box
+                      iframe(width="100%" height="315" src="https://www.youtube.com/embed/"+pr[lng][2] frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+                  .modal-close
+              .column
+                img(src="app/img/"+index+".jpg" alt=pr[lng][0])
+            hr
+                
+        
+                  
+            
+        
+    
+
+          
+        
+    section.section#contacto
+    
+    +footer
+    
+    +scripts

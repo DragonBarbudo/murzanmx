@@ -3,8 +3,8 @@ doctype html
 html(lang="es")
   head
     +head
-    title Murzan México
-    meta(name="description" content="Sistemas integrales para el procesamiento, manejo y trasvase de producto terminado y materias primas para las industrias alimenticia, cosmética, farmacéutica y biotecnológica.")
+    title=titulo[lng]
+    meta(name="description" content=descripcion[lng])
   body
     +topbar
     +navigation(false)
@@ -13,47 +13,29 @@ html(lang="es")
       .slider
         div: .section: .container: .columns.is-mobile
           .column
-            h2.is-size-1 Diseños Basados en Soluciones
-            p Sistemas integrales para el procesamiento, manejo y trasvase de producto terminado y materias primas para las industrias alimenticia, cosmética, farmacéutica y biotecnológica, nos dedicamos desde 1980 a resolver sus problemas de bombeo de fluídos con altas viscosidades y fluidos con sólidos en suspensión sin dañar las estructuras de las partículas.
-            .button.is-3d Leer más
+            h2.is-size-1 !{slider1_title[lng]}
+            p !{slider1_txt[lng]}
+            .button.is-3d !{slider1_btn[lng]}
           .column.is-4.is-hidden-mobile
             .has-text-centered
               img(src="app/img/sld1.png")
         div: .section: .container: .columns.is-mobile
           .column
-            h2.is-size-1 Diseños Basados en Soluciones
-            p Sistemas integrales para el procesamiento, manejo y trasvase de producto terminado y materias primas para las industrias alimenticia, cosmética, farmacéutica y biotecnológica, nos dedicamos desde 1980 a resolver sus problemas de bombeo de fluídos con altas viscosidades y fluidos con sólidos en suspensión sin dañar las estructuras de las partículas.
-            .button.is-3d Leer más
+            h2.is-size-1 !{slider1_title[lng]}
+            p !{slider1_txt[lng]}
+            .button.is-3d !{slider1_btn[lng]}
           .column.is-4.is-hidden-mobile
             .has-text-centered
               img(src="app/img/sld1.png")
-      .pleca
-        .section: .container
-          .columns.is-mobile.is-multiline
-            .column.is-12-mobile: h3.is-size-3 INDUSTRIES WE SERVE
-            .column.is-half-mobile
-              figure.image: img(src="app/img/ic-food.png")
-              p Comida
-            .column.is-half-mobile
-              figure.image: img(src="app/img/ic-beve.png")
-              p Bebidas
-            .column.is-half-mobile
-              figure.image: img(src="app/img/ic-poul.png")
-              p Aves, Carnes y Mariscos
-            .column.is-half-mobile
-              figure.image: img(src="app/img/ic-phar.png")
-              p Farmacéutico
-            .column.is-12-mobile
-              figure.image: img(src="app/img/ic-cosm.png")
-              p Cosmeticos
+      +pleca
     
     section.section#soluciones
       .container
         .columns.is-centered
           .column.is-8.has-text-centered
-              h2.is-title Bienvenido a Murzan México
-              h3.is-subtitle Sistemas integrales
-              p Procesamiento, manejo y trasvase de producto terminado y materias primas para las industrias alimenticia, cosmética, farmacéutica y biotecnológica, nos dedicamos desde 1980 a resolver sus problemas de bombeo de fluídos con altas viscosidades y fluidos con sólidos en suspensión sin dañar las estructuras de las partículas.
+              h2.is-title !{bienvenidos_title[lng]}
+              h3.is-subtitle !{bienvenidos_subtitle[lng]}
+              p !{bienvenidos_txt[lng]}
           
         
     section.section#contacto

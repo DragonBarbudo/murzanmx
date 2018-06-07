@@ -18,7 +18,7 @@ $(document).ready(function(){
       $( '#menu' ).removeClass('is-active');
       $('a.is-active').removeClass('is-active');
       $('html,body').animate({
-        'scrollTop':$(url).offset().top-$('.navbar').height()
+        'scrollTop':$(url).offset().top-$('.navbar').height()-80
       }, 400, 'swing');
     });
 

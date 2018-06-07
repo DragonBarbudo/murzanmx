@@ -1,0 +1,68 @@
+include app/_app
+doctype html
+html(lang="es")
+  head
+    +head
+    title Murzan México
+    meta(name="description" content="Sistemas integrales para el procesamiento, manejo y trasvase de producto terminado y materias primas para las industrias alimenticia, cosmética, farmacéutica y biotecnológica.")
+  body
+    +topbar
+    +navigation(false)
+  
+    section.section#contacto
+      .container
+        .columns
+          .column
+            h2.is-title=menu_c[lng]
+            p: strong=cont_1[lng]
+        .columns
+          .column
+            p=cont_2[lng]
+            .box
+              form
+                .field
+                  label.label=form_name[lng]
+                  input.input(name=form_name[lng] required)
+                .field
+                  label.label=form_tel[lng]
+                  input.input(name=form_tel[lng] required)
+                .field
+                  label.label=form_mail[lng]
+                  input.input(name=form_mail[lng] required)
+                .field
+                  label.label=form_city[lng]
+                  input.input(name=form_city[lng] required)
+                .field
+                  label.label=form_com[lng]
+                  textarea.textarea(name=form_com[lng] required)
+                    
+                .field.has-text-right
+                  button.button.is-3d(type="submit")=form_btn[lng]
+            
+          .column
+            p=cont_3[lng]
+            .card
+              .card-header: .card-header-title=foot_add_t[lng]
+              .card-content
+                p=foot_add_t2[lng]
+                p: strong=foot_add_t3[lng]
+                p: strong=foot_add_t4[lng]
+            hr
+            .card
+              .card-header: .card-header-title=foot_add2_t[lng]
+              .card-content
+                p=foot_add2_t2[lng]
+                p: strong=foot_add2_t3[lng]
+                p: strong=foot_add2_t4[lng]
+                  
+            
+        
+    
+
+          
+        
+    section.section#contacto
+    
+    +footer
+    
+    +scripts
