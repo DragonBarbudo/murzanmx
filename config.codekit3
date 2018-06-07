@@ -227,6 +227,76 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/app\/img\/recuperador-de-producto.jpg": {
+		"ft": 16384,
+		"iS": 13536,
+		"oA": 0,
+		"oAP": "\/app\/img\/recuperador-de-producto.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/app\/img\/sistema-cbtu-50.jpg": {
+		"ft": 16384,
+		"iS": 79125,
+		"oA": 0,
+		"oAP": "\/app\/img\/sistema-cbtu-50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/app\/img\/sistema-d-150.jpg": {
+		"ft": 16384,
+		"iS": 208323,
+		"oA": 0,
+		"oAP": "\/app\/img\/sistema-d-150.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/app\/img\/sistema-dus-50.jpg": {
+		"ft": 16384,
+		"iS": 117133,
+		"oA": 0,
+		"oAP": "\/app\/img\/sistema-dus-50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/app\/img\/sistema-kus-50.jpg": {
+		"ft": 16384,
+		"iS": 117133,
+		"oA": 0,
+		"oAP": "\/app\/img\/sistema-kus-50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/app\/img\/sistema-psw-70.jpg": {
+		"ft": 16384,
+		"iS": 108235,
+		"oA": 0,
+		"oAP": "\/app\/img\/sistema-psw-70.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/app\/img\/sistema-tus-50.jpg": {
+		"ft": 16384,
+		"iS": 162066,
+		"oA": 0,
+		"oAP": "\/app\/img\/sistema-tus-50.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/app\/img\/sld1.png": {
 		"ft": 32768,
 		"iS": 135841,

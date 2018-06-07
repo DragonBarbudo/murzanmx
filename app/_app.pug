@@ -45,7 +45,7 @@ mixin navigation(url)
             
 
 mixin navitems(absolute)
-
+  - if(absolute){absolute="productos.html"}
   .navbar-item.link-nos
     .dropdown.is-hoverable
       a(href="nosotros.html").dropdown-trigger=menu_n[lng]
@@ -53,18 +53,18 @@ mixin navitems(absolute)
         .dropdown-item: a(href="representaciones.html")=menu_r[lng]
   .navbar-item.link-prod
     .dropdown.is-hoverable
-      a(href=absolute+"#productos").dropdown-trigger=menu_np[lng]
+      a(href="#productos").dropdown-trigger=menu_np[lng]
       .dropdown-menu
-        .dropdown-item: a(href="productos.html#bomba-pi-50") BOMBA PI-50
-        .dropdown-item: a(href="productos.html#bomba-po-50") BOMBA PO-50
-        .dropdown-item: a(href="productos.html#sistema-dus-50") SISTEMA DUS-50
-        .dropdown-item: a(href="productos.html#sistema-tus-50") SISTEMA TUS-50
-        .dropdown-item: a(href="productos.html#sistema-kus-50") SISTEMA KUS-50
-        .dropdown-item: a(href="productos.html#sistema-cbtu-50") SISTEMA CBTU-50
-        .dropdown-item: a(href="productos.html#sistema-psw-70") SISTEMA PSW-70
-        .dropdown-item: a(href="productos.html#sistema-d-150") SISTEMA D-150
-        .dropdown-item: a(href="productos.html#recuperador-de-producto") RECUPERADOR DE PRODUCTO
-        .dropdown-item: a(href="productos.html#proyectos-e-ingenieria") PROYECTOS E INGENIERÍA
+        .dropdown-item: a(href=absolute+"#bomba-pi-50") BOMBA PI-50
+        .dropdown-item: a(href=absolute+"#bomba-po-50") BOMBA PO-50
+        .dropdown-item: a(href=absolute+"#sistema-dus-50") SISTEMA DUS-50
+        .dropdown-item: a(href=absolute+"#sistema-tus-50") SISTEMA TUS-50
+        .dropdown-item: a(href=absolute+"#sistema-kus-50") SISTEMA KUS-50
+        .dropdown-item: a(href=absolute+"#sistema-cbtu-50") SISTEMA CBTU-50
+        .dropdown-item: a(href=absolute+"#sistema-psw-70") SISTEMA PSW-70
+        .dropdown-item: a(href=absolute+"#sistema-d-150") SISTEMA D-150
+        .dropdown-item: a(href=absolute+"#recuperador-de-producto") RECUPERADOR DE PRODUCTO
+        .dropdown-item: a(href=absolute+"#proyectos-e-ingenieria") PROYECTOS E INGENIERÍA
   .navbar-item.link-cont: a(href="contacto.html")=menu_c[lng]
   
   

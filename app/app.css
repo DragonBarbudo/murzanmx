@@ -300,3 +300,6 @@ footer .navbar-item .dropdown-menu .dropdown-item:before {
 .modal iframe {
   width: 100%;
 }
+.left-separator {
+  border-left: 1px solid #B2B2B2;
+}
