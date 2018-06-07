@@ -1,0 +1,155 @@
+include _lang
+
+- var lng = 1; // 0 Esp - 1 Ptgs
+
+mixin head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css")
+  link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+  link(rel="stylesheet", href="//unpkg.com/slick-carousel@1.8.1/slick/slick.css")
+  link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
+  link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Lato:400,700")
+  link(rel="stylesheet" href="app/app.css")
+    
+    
+    
+
+mixin scripts
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+  script(src="//unpkg.com/slick-carousel@1.8.1/slick/slick.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js")
+  script(src="app/app.js")
+
+
+
+mixin navigation(url)
+  if url
+    - absolute = "index.html"
+  else
+    - absolute = ""
+  .navbar(role="navigation")
+    .container
+      .navbar-brand
+        a(href="index.html").navbar-item.has-text-centered
+          img(src="app/img/murzanmexico.gif", alt="Murzan México")
+        .navbar-burger.burger
+          span
+          span
+          span
+      .navbar-menu#menu
+        .navbar-end
+          +navitems(absolute)
+            
+
+mixin navitems(absolute)
+  - if(absolute){absolute="productos.html"}
+  .navbar-item.link-nos
+    .dropdown.is-hoverable
+      a(href="nosotros.html").dropdown-trigger=menu_n[lng]
+      .dropdown-menu
+        .dropdown-item: a(href="representaciones.html")=menu_r[lng]
+  .navbar-item.link-prod
+    .dropdown.is-hoverable
+      a(href="#productos").dropdown-trigger=menu_np[lng]
+      .dropdown-menu
+        .dropdown-item: a(href=absolute+"#bomba-pi-50") BOMBA PI-50
+        .dropdown-item: a(href=absolute+"#bomba-po-50") BOMBA PO-50
+        .dropdown-item: a(href=absolute+"#sistema-dus-50") SISTEMA DUS-50
+        .dropdown-item: a(href=absolute+"#sistema-tus-50") SISTEMA TUS-50
+        .dropdown-item: a(href=absolute+"#sistema-kus-50") SISTEMA KUS-50
+        .dropdown-item: a(href=absolute+"#sistema-cbtu-50") SISTEMA CBTU-50
+        .dropdown-item: a(href=absolute+"#sistema-psw-70") SISTEMA PSW-70
+        .dropdown-item: a(href=absolute+"#sistema-d-150") SISTEMA D-150
+        .dropdown-item: a(href=absolute+"#recuperador-de-producto") RECUPERADOR DE PRODUCTO
+        .dropdown-item: a(href=absolute+"#proyectos-e-ingenieria") PROYECTOS E INGENIERÍA
+  .navbar-item.link-cont: a(href="contacto.html")=menu_c[lng]
+  
+  
+mixin socialnetworks
+  .socialnetworks.columns.is-mobile.has-text-centered
+    a(href="#" target="_blank").column.fb: i.fa.fa-facebook
+    a(href="#" target="_blank").column.tw: i.fa.fa-twitter
+    a(href="" target="_blank").column.li: i.fa.fa-linkedin
+    a(href="" target="_blank").column.in: i.fa.fa-instagram
+    a(href="" target="_blank").column.yt: i.fa.fa-youtube-play
+  
+mixin topbar
+  .topbar.is-hidden-mobile: .container
+    .level
+      .level-left
+        .level-item
+          .icon.is-small: i.fa.fa-phone
+          |  5528·2384
+        .level-item
+          .icon.is-small: i.fa.fa-phone
+          | 5528·2357
+        .level-item
+          .icon.is-small: i.fa.fa-phone
+          | 5528·2367
+      
+      
+      .level-right
+        .level-item
+          a(href="mailto:murzan@murzanmexico.com.mx")
+            .icon.is-small: i.fa.fa-envelope
+            | murzan@murzanmexico.com.mx
+          
+          //+socialnetworks
+
+
+mixin footer
+  footer
+    .section
+      .container
+        .columns
+          .column
+            h4.is-size-5=foot_add_t[lng]
+            p=foot_add_t2[lng]
+            p: strong=foot_add_t3[lng]
+            p: strong=foot_add_t4[lng]
+            hr
+            h4.is-size-5=foot_add2_t[lng]
+            p=foot_add2_t2[lng]
+            p: strong=foot_add2_t3[lng]
+            p: strong=foot_add2_t4[lng]
+          .column
+            h4.is-size-5=foot_productos[lng]
+            +navitems("")
+            
+          .column
+            h4.is-size-5=foot_representaciones[lng]
+            each rep in foot_reps[lng]
+              
+              p: strong=rep[0]
+              p=rep[1]
+            
+          
+    hr
+    .section
+      .container.has-text-centered
+        p=copy[lng]
+
+
+mixin pleca
+  .pleca
+    .section: .container
+      .columns.is-mobile.is-multiline
+        .column.is-12-mobile: h3.is-size-5: strong !{pleca_ind[lng]}
+        .column.is-half-mobile
+          figure.image: img(src="app/img/ic-food.png")
+          p !{pleca_comida[lng]}
+        .column.is-half-mobile
+          figure.image: img(src="app/img/ic-beve.png")
+          p !{pleca_bebidas[lng]}
+        .column.is-half-mobile
+          figure.image: img(src="app/img/ic-poul.png")
+          p !{pleca_aves[lng]}
+        .column.is-half-mobile
+          figure.image: img(src="app/img/ic-phar.png")
+          p !{pleca_farma[lng]}
+        .column.is-12-mobile
+          figure.image: img(src="app/img/ic-cosm.png")
+          p !{pleca_cosme[lng]}
